@@ -25,6 +25,9 @@ jobs:
         java-version: '11'
         distribution: 'adopt'
 
+    - name: Set version
+      run: mvn -B versions:set -DnewVersion="0.4.0-$(git describe --long --tags --always)"
+
     - name: Build with Maven
       run: mvn -B package --file pom.xml
 
