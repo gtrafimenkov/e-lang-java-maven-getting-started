@@ -2,6 +2,7 @@
 
 - https://maven.apache.org/guides/getting-started/index.html
 - plus maven-jar-plugin configured to add the main class
+- plus JaCoCo library is configured to generate unit tests coverage
 
 ## Setup
 
@@ -22,6 +23,11 @@ java -jar target/my-app-1.0-SNAPSHOT.jar
 # in the jar's manifest
 java -cp target/my-app-1.0-SNAPSHOT.jar com.mycompany.app.App
 ```
+
+## Unit tests coverage report
+
+- `mvn jacoco:prepare-agent verify jacoco:report`
+- check ./target/site/jacoco/index.html
 
 ## Old notes
 
